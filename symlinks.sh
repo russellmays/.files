@@ -1,8 +1,8 @@
 #!/bin/bash
 # .make.sh
 
-dir=~/config
-olddir=~/old_config
+dir=~/.files
+olddir=~/.old_files
 files="zshrc slate gitconfig todo.cfg"
 
 echo "Creating $olddir for backup of any existing dotfiles in ~"
