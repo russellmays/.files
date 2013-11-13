@@ -50,3 +50,5 @@ export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bi
 export PATH=$PATH:/home/russell/.cabal/bin
 export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+[[ $EMACS = t ]] && unsetopt zle
