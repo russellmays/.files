@@ -10,7 +10,6 @@ ZSH_THEME="robbyrussell"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias t="/usr/local/Cellar/todo-txt/2.9/bin/todo.sh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
