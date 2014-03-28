@@ -46,8 +46,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
-export PATH=$PATH:/home/russell/.cabal/bin
-export PIP_REQUIRE_VIRTUALENV=true
+
+# Virtualenv
+#export PIP_REQUIRE_VIRTUALENV=true
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
-[[ $EMACS = t ]] && unsetopt zle
+# Virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+source /usr/local/bin/virtualenvwrapper.sh

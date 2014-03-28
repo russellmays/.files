@@ -2,8 +2,8 @@
 # .make.sh
 
 dir=~/.files
-olddir=~/old-dotfiles
-files="zshrc slate gitconfig todo.cfg Rprofile"
+olddir=~/old-files
+files="emacs zshrc Rprofile gitconfig slate"
 
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
