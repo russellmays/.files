@@ -3,44 +3,58 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 
-(require 'ess-site)
+;; Bigger Font
+(set-face-attribute 'default nil :height 140)
 
+;; No Backup Files
+(setq make-backup-files nil)
+
+;; Eliminate autosave
+(setq auto-save-default nil)
+
+;; Eliminate startup message
+(setq inhibit-startup-message t)
+
+;; Spaces instead of tabs
+(setq indent-tabs-mode nil)
+(setq-default c-basic-offset 4)
+
+;; Load Org-mode
+(require 'org)
+
+;; Org-mode line wrap
 (setq org-startup-truncated nil)
 
-;; Turn Done Log On
-;(setq org-log-done t)
-
-;; Agenda Files
-(setq org-agenda-files '("~/Documents/org/jokes.org"
-			 "~/Documents/org/class.org"
-                         "~/Documents/org/mesoscope.org"
-			 "~/Documents/org/professional.org"
-                         "~/Documents/org/personal.org"
-			 "~/Documents/org/emacs.org"
-                         "~/Documents/org/timeline.org"))
-
-;; Highest Priority
+;; Org Priorities
 (setq org-highest-priority ?A)
-
-;; Lowest Priority
 (setq org-lowest-priority ?E)
-
-;; Default Priority
 (setq org-default-priority ?E)
 
-;; Setting up R Babel
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((R . t)))
-
+;; Agenda Files
+(setq org-agenda-files '("~/Documents/org/class.org"
+			 "~/Documents/org/professional.org"
+			 "~/Documents/org/emacs.org"
+                         "~/Documents/org/personal.org"
+                         "~/Documents/org/timeline.org"))
 
 ;; Org Agenda Keybind
 (define-key global-map (kbd "C-c a") 'org-todo-list)
 
-;; Org Weekly Agenda
-(define-key global-map (kbd "C-c l") 'org-agenda-list)
-
+;; Solarized Theme
+;; Rectify This with Terminal Version
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 (load-theme 'solarized-dark t)
 
+;; Loading Tramp
+(require 'tramp)
+(setq tramp-default-method "scp")
+
+;; R Language Support
+(require 'ess-site)
+
+;; Python Language Support
 (load-file "~/.emacs.d/emacs-for-python/epy-init.el")
+
+;; JavaScript Support
+
+;; Haskell Support
