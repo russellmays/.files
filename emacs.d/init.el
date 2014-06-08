@@ -1,7 +1,21 @@
+;; Fix this
+(require 'package)
+
+
+(setq package-list '(magit))
+
+;; repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
+;; What do these do?
+(package-initialize)
+(package-refresh-contents)
+
+;;
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
 
 ;; Bigger Font
 (set-face-attribute 'default nil :height 140)
