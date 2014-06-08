@@ -1,22 +1,3 @@
-;; Fix this
-(require 'package)
-
-
-(setq package-list '(magit))
-
-;; repositories
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
-
-;; What do these do?
-(package-initialize)
-(package-refresh-contents)
-
-;;
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (package-install package)))
-
 ;; Bigger Font
 (set-face-attribute 'default nil :height 140)
 
@@ -59,6 +40,21 @@
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 (load-theme 'solarized-dark t)
 
+;; Package Config
+(require 'package)
+
+(setq package-list '(magit))
+
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+(package-initialize)
+(package-refresh-contents)
+
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
 ;; Loading Tramp
 (require 'tramp)
 (setq tramp-default-method "scp")
@@ -67,7 +63,6 @@
 (require 'ess-site)
 
 ;; Python Language Support
-(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
 
 ;; JavaScript Support
 
