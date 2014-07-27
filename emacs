@@ -27,43 +27,15 @@
 
 ;; Agenda Files
 (setq org-agenda-files '("~/Documents/org/class.org"
-			 "~/Documents/org/professional.org"
-			 "~/Documents/org/emacs.org"
+                         "~/Documents/org/professional.org"
                          "~/Documents/org/personal.org"
                          "~/Documents/org/timeline.org"))
 
 ;; Org Agenda Keybind
 (define-key global-map (kbd "C-c a") 'org-todo-list)
 
-;; Solarized Theme
-;; Rectify This with Terminal Version
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
-(load-theme 'solarized-dark t)
-
 ;; Package Config
 (require 'package)
 
-(setq package-list '(magit))
-
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
-
-(package-initialize)
-(package-refresh-contents)
-
-(dolist (package package-list)
-  (unless (package-installed-p package)
-    (package-install package)))
-
-;; Loading Tramp
-(require 'tramp)
-(setq tramp-default-method "scp")
-
 ;; R Language Support
 (require 'ess-site)
-
-;; Python Language Support
-
-;; JavaScript Support
-
-;; Haskell Support

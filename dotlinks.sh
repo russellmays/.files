@@ -3,7 +3,7 @@
 
 dir=~/.files
 olddir=~/old-dotfiles
-files="emacs.d zshrc Rprofile gitconfig slate"
+files="vimrc nvimrc emacs zshrc Rprofile gitconfig slate"
 
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
