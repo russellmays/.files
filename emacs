@@ -26,10 +26,7 @@
 (setq org-default-priority ?E)
 
 ;; Agenda Files
-(setq org-agenda-files '("~/Documents/org/class.org"
-                         "~/Documents/org/professional.org"
-                         "~/Documents/org/personal.org"
-                         "~/Documents/org/timeline.org"))
+(setq org-agenda-files '("~/org/timeline.org"))
 
 ;; Org Agenda Keybind
 (define-key global-map (kbd "C-c a") 'org-todo-list)
@@ -38,4 +35,4 @@
 (require 'package)
 
 ;; R Language Support
-(require 'ess-site)
+;;(require 'ess-site)
