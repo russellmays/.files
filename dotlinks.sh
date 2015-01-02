@@ -10,5 +10,3 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $newdir/$file ~/.$file
 done
-
-rmdir -r ~/dotfiles
