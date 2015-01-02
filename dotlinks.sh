@@ -1,22 +1,14 @@
-#!/bin/bash
-# .make.sh
+#!/bin/sh
 
-dir=~/.files
-olddir=~/old-dotfiles
-files="vimrc nvimrc emacs zshrc Rprofile gitconfig slate"
+newdir=~/.files
+mkdir $newdir
 
-echo "Creating $olddir for backup of any existing dotfiles in ~"
-mkdir -p $olddir
-echo "...done"
-
-echo "Changing to the $dir directory"
-cd $dir
-echo "...done"
-
-echo "Moving any existing dotfiles from ~ to $olddir"
+files="gitconfig emacs"
 
 for file in $files; do
-	mv ~/.$file $olddir
-	echo "Creating symlink to $file in home directory."
-	ln -s $dir/$file ~/.$file
+    cp $file $newdir
+    echo "Creating symlink to $file in home directory."
+    ln -s $newdir/$file ~/.$file
 done
+
+rmdir -r ~/dotfiles
