@@ -19,20 +19,3 @@
 
 ;; Org-mode line wrap
 (setq org-startup-truncated nil)
-
-;; Org Priorities
-(setq org-highest-priority ?A)
-(setq org-lowest-priority ?E)
-(setq org-default-priority ?E)
-
-;; Agenda Files
-(setq org-agenda-files '("~/org/timeline.org"))
-
-;; Org Agenda Keybind
-(define-key global-map (kbd "C-c a") 'org-todo-list)
-
-;; Package Config
-;;(require 'package)
-
-;; R Language Support
-;;(require 'ess-site)
