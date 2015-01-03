@@ -32,7 +32,7 @@
 (define-key global-map (kbd "C-c a") 'org-todo-list)
 
 ;; Package Config
-(require 'package)
+;;(require 'package)
 
 ;; R Language Support
 ;;(require 'ess-site)
