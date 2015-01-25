@@ -34,8 +34,29 @@
 (erc :server "irc.freenode.net" :port 6667 :nick "russellmays")
 
 
-;; Set-up Packages
+;; Setup Packages
 (require 'package)
+(setq package-list '(magit))
+
+;; Refactor so melpa is only source
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/") t)
+
+;; Initialize all packages?
 (package-initialize)
+
+;; What does this line do?
+(unless package-archive-contents
+	(package-refresh-contents))
+
+;; Install Packages?
+(dolist (package package-list)
+	(unless (package-installed-p package)
+		(package-install package)))
+
+
+;; Extra Packages - Just add to list [package-list] before installing everything at once?
+
+
+;; Setup Make/Compiling
+;; Setup GDB Interaction?
