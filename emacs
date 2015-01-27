@@ -27,27 +27,27 @@
 (require 'erc)
 
 ;; Auto-join Channels
-(setq erc-autojoin-channels-alist
+;;(setq erc-autojoin-channels-alist
       '(("freenode.net" "#emacs" "#haskell" "#scheme")))
 
 ;; Auto-connect
-(erc :server "irc.freenode.net" :port 6667 :nick "russellmays")
+;;(erc :server "irc.freenode.net" :port 6667 :nick "russellmays")
 
 
 ;; Setup Packages
-(require 'package)
-(setq package-list '(magit))
+;;(require 'package)
+;;(setq package-list '(magit))
 
 ;; Refactor so melpa is only source
-(add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/") t)
+;;(add-to-list 'package-archives
+;;	     '("melpa" . "http://melpa.org/packages/") t)
 
 ;; Initialize all packages?
-(package-initialize)
+;;(package-initialize)
 
 ;; What does this line do?
-(unless package-archive-contents
-	(package-refresh-contents))
+;;(unless package-archive-contents
+;;	(package-refresh-contents))
 
 ;; Install Packages?
 (dolist (package package-list)
