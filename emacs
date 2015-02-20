@@ -15,7 +15,6 @@
 (setq auto-save-default nil)
 
 
-
 ;; Load Org-mode
 (require 'org)
 
@@ -27,36 +26,22 @@
 (require 'erc)
 
 ;; Auto-join Channels
-;;(setq erc-autojoin-channels-alist
+(setq erc-autojoin-channels-alist
       '(("freenode.net" "#emacs" "#haskell" "#scheme")))
 
-;; Auto-connect
-;;(erc :server "irc.freenode.net" :port 6667 :nick "russellmays")
 
+;; Install Packages
+;; Magit -> Web -> CHICKEN?
+(setq package-list '(magit))
 
-;; Setup Packages
-;;(require 'package)
-;;(setq package-list '(magit))
+(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
 
-;; Refactor so melpa is only source
-;;(add-to-list 'package-archives
-;;	     '("melpa" . "http://melpa.org/packages/") t)
-
-;; Initialize all packages?
+;; Stops working here
 ;;(package-initialize)
 
-;; What does this line do?
 ;;(unless package-archive-contents
 ;;	(package-refresh-contents))
 
-;; Install Packages?
-(dolist (package package-list)
-	(unless (package-installed-p package)
-		(package-install package)))
-
-
-;; Extra Packages - Just add to list [package-list] before installing everything at once?
-
-
-;; Setup Make/Compiling
-;; Setup GDB Interaction?
+;;(dolist (package package-list)
+;;	(unless (package-installed-p package)
+;;		(package-install package)))
