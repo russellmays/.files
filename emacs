@@ -21,6 +21,14 @@
 ;; Org-mode line wrap
 (setq org-startup-truncated nil)
 
+;; Org-mode Agenda Command
+(global-set-key "\C-ca" 'org-todo-list)
+
+;; Org-mode Agenda Files
+(setq org-agenda-files (list "~/org/agenda/school.org"
+                             "~/org/agenda/career.org" 
+                             "~/org/agenda/personal.org"))
+
 
 ;; Load ERC
 (require 'erc)
