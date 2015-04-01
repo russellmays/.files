@@ -31,7 +31,6 @@
 
 
 ;; Install Packages
-;; Magit -> Web -> CHICKEN?
 (setq package-list '(magit))
 
 (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
@@ -45,3 +44,8 @@
 ;;(dolist (package package-list)
 ;;	(unless (package-installed-p package)
 ;;		(package-install package)))
+
+
+;; STUFF TO IMPLEMENT
+;; Color Theme
+;; Magit, R, Python, Web Development, CHICKEN
