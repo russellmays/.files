@@ -1,5 +1,5 @@
-Russell Mays Dotfiles
-=====================
+dotfiles
+========
 
 * git
 * vimrc
