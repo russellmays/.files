@@ -1,0 +1,8 @@
+#!/bin/bash
+
+dotfiles="gitconfig vimrc bashrc tmux.conf"
+
+for f in $dotfiles
+do
+    ln -s ~/dotfiles/$f ~/.$f
+done

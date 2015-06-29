@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# update
+#sudo apt-get update
+#sudo apt-get upgrade
+
+# base
+#sudo apt-get -y install vim git
+
+# WEB
+#sudo apt-get -y install mongodb
+# NVM, NODE, EMBER, ETC.
+#wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+#nvm install 0.10.33
+#nvm alias default 0.10.33
+#npm install -g ember-cli bower
+
+# R
+#sudo apt-get -y install r-base
+
+# LATEX
+#sudo apt-get -y install texlive-latex-base
+
+if [ "$1" == "install" ]; then
+    echo "Inside Installer"
+    case "$2" in
+        "base")
+            echo "Base Installer"
+            ;;
+        "web")
+            echo "Web Installer"
+            ;;
+        *)
+            echo "INSTALL ALL"
+    esac
+fi
