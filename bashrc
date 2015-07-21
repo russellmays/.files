@@ -1,2 +1,1 @@
-export PATH=$PATH:$HOME/.cabal/bin
-source ~/.nvm/nvm.sh
+PATH=$HOME/.cabal/bin:$PATH

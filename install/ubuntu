@@ -1,10 +1,34 @@
 #!/bin/bash
 
-if [ "$1" == "install" ]; then
+# ASSUMED: bash, tmux, vim, git, python
+
+if [ "$1" == "update" ]; then
+    sudo apt-get -y update
+    sudo apt-get -y upgrade
+
+elif [ "$1" == "install" ]; then
     case "$2" in
         "base")
-            sudo apt-get -y install vim
+            # upgrade to zsh and pretty colors?
             git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+            ;;
+        "haskell")
+            # change this to ghc and cabal, stack?
+            sudo apt-get -y install haskell-platform
+            cabal update
+            cabal install cabal-install
+            ;;
+        "python")
+            # upgrade to python 3 eventually
+            sudo apt-get -y install python-virtualenv
+            ;;
+        "r")
+            sudo apt-get -y install r-base
+            ;;
+        "latex")
+            sudo apt-get -y install texlive-latex-base xzdec
+            tlmgr init-usertree
+            tlmgr install titlesec
             ;;
         "node")
             sudo apt-get -y install mongodb
@@ -13,28 +37,16 @@ if [ "$1" == "install" ]; then
             nvm alias default 0.10.33
             npm install -g express-generator
             ;;
-        "r")
-            sudo apt-get -y install r-base
-            ;;
-        "latex")
-            sudo apt-get -y install texlive-latex-base
-            ;;
-        "haskell")
-            sudo apt-get -y install haskell-platform
-            ;;
         "")
             echo "Please Choose An Available Stack:"
             echo "base"
-            echo "node"
+            echo "haskell"
+            echo "python"
             echo "r"
             echo "latex"
-            echo "haskell"
+            echo "node"
             ;;
     esac
-
-elif [ "$1" == "update" ]; then
-    sudo apt-get update
-    sudo apt-get upgrade
 
 else
     echo "Please Provide A Command"
