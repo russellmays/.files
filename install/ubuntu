@@ -1,36 +1,41 @@
 #!/bin/bash
 
-# update
-#sudo apt-get update
-#sudo apt-get upgrade
-
-# base
-#sudo apt-get -y install vim git
-
-# WEB
-#sudo apt-get -y install mongodb
-# NVM, NODE, EMBER, ETC.
-#wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-#nvm install 0.10.33
-#nvm alias default 0.10.33
-#npm install -g ember-cli bower
-
-# R
-#sudo apt-get -y install r-base
-
-# LATEX
-#sudo apt-get -y install texlive-latex-base
-
 if [ "$1" == "install" ]; then
-    echo "Inside Installer"
     case "$2" in
         "base")
-            echo "Base Installer"
+            sudo apt-get -y install vim
+            git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
             ;;
-        "web")
-            echo "Web Installer"
+        "node")
+            sudo apt-get -y install mongodb
+            wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
+            nvm install 0.10.33
+            nvm alias default 0.10.33
+            npm install -g express-generator
             ;;
-        *)
-            echo "INSTALL ALL"
+        "r")
+            sudo apt-get -y install r-base
+            ;;
+        "latex")
+            sudo apt-get -y install texlive-latex-base
+            ;;
+        "haskell")
+            sudo apt-get -y install haskell-platform
+            ;;
+        "")
+            echo "Please Choose An Available Stack:"
+            echo "base"
+            echo "node"
+            echo "r"
+            echo "latex"
+            echo "haskell"
+            ;;
     esac
+
+elif [ "$1" == "update" ]; then
+    sudo apt-get update
+    sudo apt-get upgrade
+
+else
+    echo "Please Provide A Command"
 fi

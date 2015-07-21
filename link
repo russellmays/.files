@@ -4,5 +4,8 @@ dotfiles="gitconfig vimrc bashrc tmux.conf"
 
 for f in $dotfiles
 do
+    if [ -f ~/.$f ]; then
+        rm ~/.$f
+    fi
     ln -s ~/dotfiles/$f ~/.$f
 done
