@@ -1,11 +1,13 @@
 #!/bin/bash
 
-dotfiles="gitconfig vimrc bashrc tmux.conf"
+dotfiles="gitconfig vimrc bashrc tmux.conf dunn.conf"
 
-for f in $dotfiles
-do
-    if [ -f ~/.$f ]; then
-        rm ~/.$f
+for f in $dotfiles; do
+    if [ -f $HOME/.$f ]; then
+        if [ ! -d $HOME/old-dotfiles ]; then
+            mkdir $HOME/old-dotfiles
+        fi
+        mv $HOME/.$f $HOME/old-dotfiles
     fi
     ln -s ~/dotfiles/$f ~/.$f
 done
