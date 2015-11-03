@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dotfiles="gitconfig vimrc bashrc tmux.conf dunn.conf"
+dotfiles="gitconfig vimrc bashrc tmux.conf"
 
 for f in $dotfiles; do
     if [ -f $HOME/.$f ]; then
