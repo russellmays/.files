@@ -1,5 +1,4 @@
-dotfiles
-========
+3 dotfiles
 
 * tmux
 * vimrc
