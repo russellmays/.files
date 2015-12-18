@@ -6,7 +6,6 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'scrooloose/nerdtree'
 " Haskell
 " Python
 " JavaScript
