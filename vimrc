@@ -8,6 +8,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 " Haskell
 " Python
+" TypeScript
+Plugin 'leafgarland/typescript-vim'
 " JavaScript
 call vundle#end()
 filetype plugin indent on

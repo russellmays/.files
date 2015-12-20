@@ -8,6 +8,8 @@ export PATH=/opt/alex/3.1.3/bin:$PATH
 # Python
 #alias python=python3
 
+# TypeScript
+
 # JavaScript
 # NVM
 export NVM_DIR="/home/vagrant/.nvm"
