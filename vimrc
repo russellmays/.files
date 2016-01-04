@@ -10,6 +10,8 @@ Plugin 'plasticboy/vim-markdown'
 " Python
 " TypeScript
 Plugin 'leafgarland/typescript-vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Quramy/tsuquyomi'
 " JavaScript
 call vundle#end()
 filetype plugin indent on
