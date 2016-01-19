@@ -3,7 +3,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+" General
+Plugin 'scrooloose/nerdtree'
+" Git
 Plugin 'tpope/vim-fugitive'
+" Markdown
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 " Haskell
