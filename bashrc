@@ -1,7 +1,7 @@
 # Haskell
 
 # Python
-#alias python=python3
+alias python=python3
 
 # TypeScript
 
