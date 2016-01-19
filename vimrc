@@ -19,6 +19,7 @@ Plugin 'Quramy/tsuquyomi'
 " JavaScript
 call vundle#end()
 filetype plugin indent on
+syntax on
 set tabstop=4
 set shiftwidth=4
 set expandtab
