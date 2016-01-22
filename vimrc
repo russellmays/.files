@@ -3,7 +3,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-" General
+" Nerdtree
 Plugin 'scrooloose/nerdtree'
 " Git
 Plugin 'tpope/vim-fugitive'
@@ -12,11 +12,11 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 " Haskell
 " Python
+" JavaScript
 " TypeScript
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Quramy/tsuquyomi'
-" JavaScript
 call vundle#end()
 filetype plugin indent on
 syntax on
