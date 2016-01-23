@@ -12,6 +12,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 " Haskell
 " Python
+" R
+Plugin 'vim-scripts/Vim-R-plugin'
 " JavaScript
 " TypeScript
 Plugin 'leafgarland/typescript-vim'
