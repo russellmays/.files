@@ -9,23 +9,24 @@ for f in $dotfiles; do
         fi
         mv $HOME/.$f $HOME/old-dotfiles
     fi
-    ln -s ~/dotfiles/$f ~/.$f
+    ln -s $HOME/dotfiles/$f $HOME/.$f
 done
 echo "Finished initial sync"
 echo "Sync gitconfig?"
 select yn in "Yes" "No"; do
     case $yn in
 	Yes )
-            if [ -f $HOME/.$f]; then
-            	if [ -f $HOME/old-dotfiles ]; then
-                    mkdir $HOME/old-dotfiles
-            	fi
-                mv $HOME/.$f $HOME/old-dotfiles
+        if [ -f $HOME/.gitconfig ]; then
+            if [ ! -d $HOME/old-dotfiles ]; then
+                mkdir $HOME/old-dotfiles
             fi
-            ln -s $HOME/.$f $HOME/old-dotfiles
-            break;;
-        No )
-            echo "Didn't sync gitconfig"
-            exit;;
+            mv $HOME/.gitconfig $HOME/old-dotfiles
+        fi
+        ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
+        echo "Synced gitconfig"
+        break;;
+    No )
+        echo "Didn't sync gitconfig"
+        exit;;
     esac
 done
