@@ -7,18 +7,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 " Git
 Plugin 'tpope/vim-fugitive'
-" Markdown
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-" Haskell
-" Python
 " R
 Plugin 'vim-scripts/Vim-R-plugin'
-" JavaScript
-" TypeScript
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Quramy/tsuquyomi'
 call vundle#end()
 filetype plugin indent on
 syntax on
