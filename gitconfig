@@ -1,3 +1,5 @@
 [user]
 	name = Russell Mays
 	email = russell.c.mays@gmail.com
+[push]
+	default = simple
