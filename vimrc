@@ -1,15 +1,13 @@
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 " Nerdtree
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 " Git
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " R
-Plugin 'vim-scripts/Vim-R-plugin'
-call vundle#end()
+Plug 'vim-scripts/Vim-R-plugin'
+
+call plug#end()
+
 filetype plugin indent on
 syntax on
 set tabstop=4
