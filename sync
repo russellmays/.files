@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Starting initial sync"
-dotfiles="bashrc tmux.conf vimrc"
+dotfiles="tmux.conf vimrc"
 for f in $dotfiles; do
     if [ -f $HOME/.$f ]; then
         if [ ! -d $HOME/old-dotfiles ]; then
