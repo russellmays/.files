@@ -2,11 +2,12 @@ call plug#begin('~/.vim/plugged')
 
 " vimproc
 Plug 'Shougo/vimproc.vim'
+
 " NERDTree
 Plug 'scrooloose/nerdtree'
+
 " Git
 Plug 'tpope/vim-fugitive'
-
 
 " R
 Plug 'vim-scripts/Vim-R-plugin'
@@ -14,6 +15,13 @@ Plug 'vim-scripts/Vim-R-plugin'
 " TypeScript
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
+
+" JavaScript
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+" Elm
+Plug 'elmcast/elm-vim'
 
 call plug#end()
 
