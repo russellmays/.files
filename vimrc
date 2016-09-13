@@ -1,16 +1,10 @@
 call plug#begin('~/.vim/plugged')
 
-" vimproc
-Plug 'Shougo/vimproc.vim'
-
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
 " Git
-Plug 'tpope/vim-fugitive'
-
-" R
-Plug 'vim-scripts/Vim-R-plugin'
+"Plug 'tpope/vim-fugitive'
 
 " TypeScript
 Plug 'leafgarland/typescript-vim'
@@ -22,6 +16,10 @@ Plug 'mxw/vim-jsx'
 
 " Elm
 Plug 'elmcast/elm-vim'
+
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
