@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+" Solarized Theme
+"Plug 'altercation/vim-colors-solarized'
+
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
@@ -7,8 +10,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'leafgarland/typescript-vim'
 Plug 'Shougo/vimproc.vim'
 Plug 'Quramy/tsuquyomi'
-" Alternative Error Display
-"Plug 'scrooloose/syntastic'
 
 " Less
 Plug 'groenewege/vim-less'
@@ -28,10 +29,13 @@ Plug 'elmcast/elm-vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
-" Git
-"Plug 'tpope/vim-fugitive'
+" Fugitive
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
+
+
+" General Settings
 
 " Detect Filetypes and Load Plugins
 filetype plugin indent on
@@ -50,6 +54,11 @@ set number
 set noswapfile
 
 
+" Solarized Theme Settings
+"set background=light
+"colorscheme solarized
+
+
 " NERDTree Settings
 
 " Open NERDTree on Startup
@@ -60,3 +69,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Close Solitary NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+" Fugitive Settings
+set statusline+=%{fugitive#statusline()}
