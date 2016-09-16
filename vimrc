@@ -17,6 +17,10 @@ Plug 'mxw/vim-jsx'
 " Elm
 Plug 'elmcast/elm-vim'
 
+" PureScript
+
+" Haskell
+
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
