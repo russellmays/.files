@@ -1,19 +1,23 @@
 call plug#begin('~/.vim/plugged')
 
-" vimproc
-Plug 'Shougo/vimproc.vim'
 " NERDTree
 Plug 'scrooloose/nerdtree'
+
 " Git
 Plug 'tpope/vim-fugitive'
-
 
 " R
 Plug 'vim-scripts/Vim-R-plugin'
 
 " TypeScript
 Plug 'leafgarland/typescript-vim'
+Plug 'Shougo/vimproc.vim'
 Plug 'Quramy/tsuquyomi'
+" Alternative Error Display?
+"Plug 'scrooloose/syntastic'
+
+" Less
+Plug 'groenewege/vim-less'
 
 call plug#end()
 
