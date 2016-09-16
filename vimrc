@@ -3,14 +3,11 @@ call plug#begin('~/.vim/plugged')
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
-" Git
-"Plug 'tpope/vim-fugitive'
-
 " TypeScript
 Plug 'leafgarland/typescript-vim'
 Plug 'Shougo/vimproc.vim'
 Plug 'Quramy/tsuquyomi'
-" Alternative Error Display?
+" Alternative Error Display
 "Plug 'scrooloose/syntastic'
 
 " Less
@@ -31,6 +28,9 @@ Plug 'elmcast/elm-vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" Git
+"Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 " Detect Filetypes and Load Plugins
@@ -48,3 +48,15 @@ set number
 
 " No Swp Files
 set noswapfile
+
+
+" NERDTree Settings
+
+" Open NERDTree on Startup
+autocmd vimenter * NERDTree
+
+" NERDTree Toggle Command
+map <C-n> :NERDTreeToggle<CR>
+
+" Close Solitary NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
