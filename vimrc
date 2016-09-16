@@ -4,10 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 
 " Git
-Plug 'tpope/vim-fugitive'
-
-" R
-Plug 'vim-scripts/Vim-R-plugin'
+"Plug 'tpope/vim-fugitive'
 
 " TypeScript
 Plug 'leafgarland/typescript-vim'
@@ -18,6 +15,21 @@ Plug 'Quramy/tsuquyomi'
 
 " Less
 Plug 'groenewege/vim-less'
+
+" JavaScript
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
+" Elm
+Plug 'elmcast/elm-vim'
+
+" PureScript
+
+" Haskell
+
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 

@@ -1,7 +1,22 @@
 #!/bin/bash
 
-echo "Starting initial sync"
-dotfiles="tmux.conf vimrc"
+echo "Syncing"
+
+# xmonad.hs
+if [ ! -d $HOME/.xmonad ]; then
+    mkdir $HOME/.xmonad
+else
+    if [ -f $HOME/.xmonad/xmonad.hs ]; then
+        if [ ! -d $HOME/old-dotfiles ]; then
+            mkdir $HOME/old-dotfiles
+        fi
+        mv $HOME/.xmonad/xmonad.hs $HOME/old-dotfiles
+    fi
+fi
+ln -s $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
+
+# dotfiles
+dotfiles="xmobarrc tmux.conf vimrc"
 for f in $dotfiles; do
     if [ -f $HOME/.$f ]; then
         if [ ! -d $HOME/old-dotfiles ]; then
@@ -11,7 +26,8 @@ for f in $dotfiles; do
     fi
     ln -s $HOME/dotfiles/$f $HOME/.$f
 done
-echo "Finished initial sync"
+
+# gitconfig
 echo "Sync gitconfig?"
 select yn in "Yes" "No"; do
     case $yn in
@@ -30,3 +46,5 @@ select yn in "Yes" "No"; do
         exit;;
     esac
 done
+
+echo "Done"
