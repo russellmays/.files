@@ -62,7 +62,7 @@ colorscheme solarized
 " NERDTree Settings
 
 " Open NERDTree on Startup
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 
 " NERDTree Toggle Command
 map <C-n> :NERDTreeToggle<CR>
