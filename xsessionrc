@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Load resources
-xrdb -DSOLARIZED_LIGHT -merge ~/.Xresources
+# Xresources
+xrdb -load ~/.Xresources
 
-# Tray
+# Xmobar
 xmobar &
 
+# Xmonad
 exec xmonad

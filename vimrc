@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Solarized Theme
-"Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
@@ -55,8 +55,8 @@ set noswapfile
 
 
 " Solarized Theme Settings
-"set background=light
-"colorscheme solarized
+set background=dark
+colorscheme solarized
 
 
 " NERDTree Settings
