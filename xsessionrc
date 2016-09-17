@@ -4,7 +4,7 @@
 xrdb -load ~/.Xresources
 
 # Xmobar
-xmobar &
+#xmobar &
 
 # Xmonad
-exec xmonad
+#exec xmonad
