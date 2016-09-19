@@ -56,13 +56,12 @@ set noswapfile
 
 " Solarized Theme Settings
 set background=dark
+" Use this line at work for now
+let g:solarized_termcolors=256
 colorscheme solarized
 
 
 " NERDTree Settings
-
-" Open NERDTree on Startup
-"autocmd vimenter * NERDTree
 
 " NERDTree Toggle Command
 map <C-n> :NERDTreeToggle<CR>
