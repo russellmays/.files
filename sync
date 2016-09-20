@@ -7,10 +7,7 @@ if [ ! -d $HOME/.xmonad ]; then
     mkdir $HOME/.xmonad
 else
     if [ -f $HOME/.xmonad/xmonad.hs ]; then
-        if [ ! -d $HOME/old-dotfiles ]; then
-            mkdir $HOME/old-dotfiles
-        fi
-        mv $HOME/.xmonad/xmonad.hs $HOME/old-dotfiles
+        rm $HOME/.xmonad/xmonad.hs
     fi
 fi
 ln -s $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
@@ -19,10 +16,7 @@ ln -s $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
 dotfiles="Xresources xsessionrc bashrc tmux.conf vimrc"
 for f in $dotfiles; do
     if [ -f $HOME/.$f ]; then
-        if [ ! -d $HOME/old-dotfiles ]; then
-            mkdir $HOME/old-dotfiles
-        fi
-        mv $HOME/.$f $HOME/old-dotfiles
+        rm $HOME/.$f
     fi
     ln -s $HOME/dotfiles/$f $HOME/.$f
 done
@@ -33,16 +27,13 @@ select yn in "Yes" "No"; do
     case $yn in
 	Yes )
         if [ -f $HOME/.gitconfig ]; then
-            if [ ! -d $HOME/old-dotfiles ]; then
-                mkdir $HOME/old-dotfiles
-            fi
-            mv $HOME/.gitconfig $HOME/old-dotfiles
+            rm $HOME/.gitconfig
         fi
         ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
         echo "Synced gitconfig"
         break;;
     No )
-        echo "Didn't sync gitconfig"
+        echo "Did not sync gitconfig"
         exit;;
     esac
 done
