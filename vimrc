@@ -7,8 +7,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 
 " vim-airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 
 " TypeScript
 Plug 'leafgarland/typescript-vim'
