@@ -21,8 +21,6 @@ Plug 'mxw/vim-jsx'
 " Elm
 Plug 'elmcast/elm-vim'
 
-" PureScript
-
 " Haskell
 
 " Markdown
@@ -56,8 +54,6 @@ set noswapfile
 
 " Solarized Theme Settings
 set background=dark
-" Use this line at work for now
-let g:solarized_termcolors=256
 colorscheme solarized
 
 
@@ -71,4 +67,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 
 " Fugitive Settings
-set statusline+=%{fugitive#statusline()}
+"set statusline+=%{fugitive#statusline()}
