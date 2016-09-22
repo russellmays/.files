@@ -6,6 +6,10 @@ Plug 'altercation/vim-colors-solarized'
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
+" vim-airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " TypeScript
 Plug 'leafgarland/typescript-vim'
 Plug 'Shougo/vimproc.vim'
@@ -66,5 +70,6 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 
-" Fugitive Settings
-"set statusline+=%{fugitive#statusline()}
+" vim-airline Settings
+"let g:airline_powerline_fonts = 1
+"let g:airline_theme='solarized'
