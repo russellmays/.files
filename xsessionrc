@@ -4,4 +4,4 @@
 xrdb -load ~/.Xresources
 
 # Xmonad
-exec xmonad
+#exec xmonad
