@@ -25,8 +25,6 @@ Plug 'mxw/vim-jsx'
 " Elm
 Plug 'elmcast/elm-vim'
 
-" Haskell
-
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -45,9 +43,12 @@ filetype plugin indent on
 syntax on
 
 " Indentation
-set tabstop=4
 set expandtab
 set shiftwidth=4
+set tabstop=4
+
+" JavaScript
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 " Line Numbers
 set number
