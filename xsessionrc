@@ -2,6 +2,3 @@
 
 # Xresources
 xrdb -load ~/.Xresources
-
-# Xmonad
-#exec xmonad
