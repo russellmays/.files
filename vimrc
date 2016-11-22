@@ -18,15 +18,14 @@ Plug 'groenewege/vim-less'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+" Clojure
+
 " Elm
 Plug 'elmcast/elm-vim'
 
 " Markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
-
-" Fugitive
-Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -42,9 +41,6 @@ syntax on
 set expandtab
 set shiftwidth=4
 set tabstop=4
-
-" JavaScript
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 
 " Line Numbers
 set number
@@ -65,3 +61,9 @@ map <C-n> :NERDTreeToggle<CR>
 
 " Close Solitary NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+
+" JavaScript Settings
+
+" Indent 2 spaces
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
