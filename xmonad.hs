@@ -16,6 +16,9 @@ main = do
         , focusedBorderColor = "#cd8b00"
         , manageHook = manageDocks <+> manageHook defaultConfig
         , layoutHook = avoidStruts $ layoutHook defaultConfig
+        , handleEventHook = mconcat
+                          [ docksEventHook
+                          , handleEventHook defaultConfig ]
         , logHook = dynamicLogWithPP xmobarPP
                         { ppOutput = hPutStrLn xmproc
                         , ppTitle = xmobarColor "green" "" . shorten 50
