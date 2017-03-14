@@ -6,22 +6,14 @@ Plug 'altercation/vim-colors-solarized'
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
-" TypeScript
-Plug 'leafgarland/typescript-vim'
-Plug 'Shougo/vimproc.vim'
-Plug 'Quramy/tsuquyomi'
-
-" Less
-Plug 'groenewege/vim-less'
-
 " JavaScript
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
-" Clojure
+" Less
+Plug 'groenewege/vim-less'
 
-" Elm
-Plug 'elmcast/elm-vim'
+" Clojure
 
 " Markdown
 Plug 'godlygeek/tabular'
