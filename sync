@@ -3,9 +3,9 @@
 echo "syncing"
 
 echo "linux?"
-select yn in "Yes" "No"; do
+select yn in "yes" "no"; do
     case $yn in
-	Yes )
+	yes )
         if [ ! -d $HOME/.xmonad ]; then
             mkdir $HOME/.xmonad
         else
@@ -16,7 +16,7 @@ select yn in "Yes" "No"; do
         ln -s $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
         dotfiles="Xresources xmobarrc xsessionrc dir_colors bashrc tmux.conf vimrc"
         break;;
-    No )
+    no )
         dotfiles="tmux.conf vimrc"
         break;;
     esac
@@ -32,14 +32,14 @@ done
 echo "gitconfig?"
 select yn in "yes" "no"; do
     case $yn in
-	Yes )
+	yes )
         if [ -f $HOME/.gitconfig ]; then
             rm $HOME/.gitconfig
         fi
         ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
         echo "synced gitconfig"
         break;;
-    No )
+    no )
         echo "did not sync gitconfig"
         exit;;
     esac

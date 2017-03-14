@@ -10,6 +10,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 
+" CoffeeScript
+Plug 'kchmck/vim-coffee-script'
+
 " Less
 Plug 'groenewege/vim-less'
 
