@@ -13,6 +13,9 @@ Plug 'mxw/vim-jsx'
 " CoffeeScript
 Plug 'kchmck/vim-coffee-script'
 
+" Mustache
+Plug 'mustache/vim-mustache-handlebars'
+
 " Less
 Plug 'groenewege/vim-less'
 
