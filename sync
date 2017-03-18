@@ -1,27 +1,19 @@
 #!/bin/bash
 
-echo "syncing"
+echo "Syncing"
 
-echo "linux?"
-select yn in "yes" "no"; do
-    case $yn in
-	yes )
-        if [ ! -d $HOME/.xmonad ]; then
-            mkdir $HOME/.xmonad
-        else
-            if [ -f $HOME/.xmonad/xmonad.hs ]; then
-                rm $HOME/.xmonad/xmonad.hs
-            fi
-        fi
-        ln -s $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
-        dotfiles="Xresources xmobarrc xsessionrc dir_colors bashrc tmux.conf vimrc"
-        break;;
-    no )
-        dotfiles="tmux.conf vimrc"
-        break;;
-    esac
-done
+# xmonad.hs
+if [ ! -d $HOME/.xmonad ]; then
+    mkdir $HOME/.xmonad
+else
+    if [ -f $HOME/.xmonad/xmonad.hs ]; then
+        rm $HOME/.xmonad/xmonad.hs
+    fi
+fi
+ln -s $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
 
+# dotfiles
+dotfiles="Xresources xmobarrc xsessionrc dir_colors bashrc tmux.conf vimrc"
 for f in $dotfiles; do
     if [ -f $HOME/.$f ]; then
         rm $HOME/.$f
@@ -29,20 +21,21 @@ for f in $dotfiles; do
     ln -s $HOME/dotfiles/$f $HOME/.$f
 done
 
-echo "gitconfig?"
-select yn in "yes" "no"; do
+# gitconfig
+echo "Sync gitconfig?"
+select yn in "Yes" "No"; do
     case $yn in
-	yes )
+	Yes )
         if [ -f $HOME/.gitconfig ]; then
             rm $HOME/.gitconfig
         fi
         ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
-        echo "synced gitconfig"
+        echo "Synced gitconfig"
         break;;
-    no )
-        echo "did not sync gitconfig"
+    No )
+        echo "Did not sync gitconfig"
         exit;;
     esac
 done
 
-echo "done"
+echo "Done"
