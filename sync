@@ -2,40 +2,36 @@
 
 echo "Syncing"
 
-# xmonad.hs
-if [ ! -d $HOME/.xmonad ]; then
-    mkdir $HOME/.xmonad
-else
-    if [ -f $HOME/.xmonad/xmonad.hs ]; then
-        rm $HOME/.xmonad/xmonad.hs
-    fi
-fi
-ln -s $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
+echo "Sync Work Computer?"
+select yn in "Yes" "No"; do
+    case $yn in
+	Yes )
+            echo "Syncing Work Computer"
+            # sync only vimrc dotfile for work computer (mac)
+            dotfiles="vimrc"
+	    break;;
+        No )
+            echo "Syncing Home Computer"
+            # Xmonad
+            if [ ! -d $HOME/.xmonad ]; then
+                mkdir $HOME/.xmonad
+            else
+                if [ -f $HOME/.xmonad/xmonad.hs ]; then
+                    rm $HOME/.xmonad/xmonad.hs
+                fi
+            fi
+            ln -s $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
+            # sync all dotfiles for home computer (linux)
+            dotfiles="Xresources xmobarrc xsessionrc dir_colors bashrc tmux.conf vimrc gitconfig"
+            exit;;
+    esac
+done
 
-# dotfiles
-dotfiles="Xresources xmobarrc xsessionrc dir_colors bashrc tmux.conf vimrc"
 for f in $dotfiles; do
     if [ -f $HOME/.$f ]; then
         rm $HOME/.$f
     fi
     ln -s $HOME/dotfiles/$f $HOME/.$f
-done
-
-# gitconfig
-echo "Sync gitconfig?"
-select yn in "Yes" "No"; do
-    case $yn in
-	Yes )
-        if [ -f $HOME/.gitconfig ]; then
-            rm $HOME/.gitconfig
-        fi
-        ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
-        echo "Synced gitconfig"
-        break;;
-    No )
-        echo "Did not sync gitconfig"
-        exit;;
-    esac
 done
 
 echo "Done"
