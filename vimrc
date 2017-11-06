@@ -38,6 +38,8 @@ set tabstop=4
 set number
 " No Swp Files
 set noswapfile
+" Prevent adding newline
+set nofixeol
 " Solarized Theme Settings
 set background=dark
 colorscheme solarized
@@ -55,3 +57,7 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 " CoffeeScript Settings
 " Indent 2 spaces
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2
+
+" Handlebars Settings
+" Indent 2 spaces
+autocmd FileType handlebars setlocal shiftwidth=2 tabstop=2
