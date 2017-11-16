@@ -19,9 +19,8 @@ Plug 'mustache/vim-mustache-handlebars'
 " Less
 Plug 'groenewege/vim-less'
 
-" Markdown
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+" Go
+Plug 'fatih/vim-go'
 
 call plug#end()
 
@@ -30,7 +29,7 @@ call plug#end()
 filetype plugin indent on
 " Enable Syntax
 syntax on
-" Indentation
+" Indentation, Generally 4 Spaces
 set expandtab
 set shiftwidth=4
 set tabstop=4
