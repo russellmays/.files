@@ -13,11 +13,15 @@ Plug 'mxw/vim-jsx'
 " CoffeeScript
 Plug 'kchmck/vim-coffee-script'
 
-" Mustache
+" Handlebars
 Plug 'mustache/vim-mustache-handlebars'
 
 " Less
 Plug 'groenewege/vim-less'
+
+" Python
+
+" Clojure
 
 " Go
 Plug 'fatih/vim-go'
