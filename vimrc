@@ -8,7 +8,6 @@ Plug 'scrooloose/nerdtree'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 
 " CoffeeScript
 Plug 'kchmck/vim-coffee-script'
@@ -22,9 +21,6 @@ Plug 'groenewege/vim-less'
 " Python
 
 " Clojure
-
-" Go
-Plug 'fatih/vim-go'
 
 call plug#end()
 
