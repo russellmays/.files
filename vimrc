@@ -18,8 +18,6 @@ Plug 'mustache/vim-mustache-handlebars'
 " Less
 Plug 'groenewege/vim-less'
 
-" Python
-
 " Clojure
 
 call plug#end()
