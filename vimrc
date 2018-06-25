@@ -23,6 +23,7 @@ Plug 'groenewege/vim-less'
 " Go
 
 " Clojure
+Plug 'tpope/vim-fireplace'
 
 call plug#end()
 
