@@ -12,6 +12,9 @@ Plug 'pangloss/vim-javascript'
 " CoffeeScript
 Plug 'kchmck/vim-coffee-script'
 
+" Elm
+Plug 'elmcast/elm-vim'
+
 " Handlebars
 Plug 'mustache/vim-mustache-handlebars'
 
