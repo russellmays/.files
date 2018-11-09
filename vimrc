@@ -24,6 +24,7 @@ Plug 'groenewege/vim-less'
 " Python
 
 " Go
+Plug 'fatih/vim-go'
 
 " Clojure
 Plug 'tpope/vim-fireplace'
