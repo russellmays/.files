@@ -9,10 +9,12 @@ Plug 'scrooloose/nerdtree'
 " JavaScript
 Plug 'pangloss/vim-javascript'
 
+" TypeScript
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
+
 " Go
 Plug 'fatih/vim-go'
-
-" Python
 
 call plug#end()
 
