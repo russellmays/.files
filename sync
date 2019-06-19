@@ -22,7 +22,7 @@ select yn in "Yes" "No"; do
             fi
             ln -s $HOME/dotfiles/xmonad.hs $HOME/.xmonad/xmonad.hs
             # sync all dotfiles for home computer (linux)
-            dotfiles="Xresources xmobarrc xsessionrc dir_colors bashrc tmux.conf vimrc gitconfig"
+            dotfiles="vimrc Xresources xmobarrc xsessionrc dir_colors tmux.conf gitconfig"
             break;;
     esac
 done
