@@ -13,6 +13,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 
+" Vue
+Plug 'posva/vim-vue'
+
 " Go
 Plug 'fatih/vim-go'
 
