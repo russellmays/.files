@@ -19,6 +19,9 @@ Plug 'posva/vim-vue'
 " Go
 Plug 'fatih/vim-go'
 
+" Racket
+Plug 'wlangstroth/vim-racket'
+
 call plug#end()
 
 
