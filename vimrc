@@ -6,6 +6,10 @@ Plug 'altercation/vim-colors-solarized'
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
+" Ruby?
+
+" Clojure?
+
 " JavaScript
 Plug 'pangloss/vim-javascript'
 
@@ -24,7 +28,7 @@ call plug#end()
 
 " General Settings
 
-" Detect Filetypes and Load Plugins
+" Detect Filetypes, Plugins, Indentation
 filetype plugin indent on
 
 " Enable Syntax
