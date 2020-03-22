@@ -6,7 +6,8 @@ Plug 'altercation/vim-colors-solarized'
 " NERDTree
 Plug 'scrooloose/nerdtree'
 
-" Ruby?
+" Ruby
+Plug 'vim-ruby/vim-ruby'
 
 " Clojure?
 
