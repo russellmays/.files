@@ -13,7 +13,7 @@ select yn in "Yes" "No"; do
     No )
         echo "Syncing Home Computer"
         # sync all dotfiles for home computer (linux)
-        dotfiles="vimrc bashrc xsessionrc Xresources dir_colors tmux.conf gitconfig"
+        dotfiles="vimrc bashrc dir_colors tmux.conf gitconfig xsessionrc Xresources"
         break;;
     esac
 done
