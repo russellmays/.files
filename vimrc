@@ -7,6 +7,10 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
 
 " Clojure
+Plug 'guns/vim-sexp'
+"Plug 'tpope/vim-sexp-mappings-for-regular-people'
+"Plug 'tpope/vim-fireplace'
+"Plug 'tpope/vim-salve'
 
 " Ruby
 Plug 'vim-ruby/vim-ruby'
